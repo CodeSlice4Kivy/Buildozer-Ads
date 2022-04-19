@@ -1,0 +1,55 @@
+<Home>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1, 0.1
+        pos_hint: {'top': 1}
+        canvas.before:
+            Color:
+                rgba: 1,1,0.2,1
+            Rectangle:
+                size: (self.width, self.height)
+                pos: (self.x, self.y)
+        Label:
+            text: 'Welcome to CodeSLice'
+            text_size: self.size  
+            valign: 'middle'
+            color: (0, 0, 1, 1)
+            bold: True  
+
+        BoxLayout:
+            Button:
+                text: 'Widget'
+            Button:
+                text: 'events'
+            Button:
+                text: 'starage'
+            Button:
+                text: 'examples'
+
+
+    BoxLayout:
+        size_hint: (1, 0.9)
+        canvas.before:
+            Color:
+                rgba: 0.4,1,0.4,1
+            Rectangle:
+                size: (self.width, self.height)
+                pos: (self.x, self.y)
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                height: dp(4000)
+                size_hint_y: None
+                Button:
+                    text: 'Btn 1'
+                    background_color: (1, 1, 1, 0.5)
+                Button:
+                    text: 'Btn 2'
+                    background_color: (1, 1, 1, 0.8)
+                Button:
+                    text: 'Btn 3'
+                    background_color: (1, 1, 1, 1)
+
+
+
